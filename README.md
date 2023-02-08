@@ -43,6 +43,33 @@ Exemplo da resposta:
 // Sem conteúdo no corpo (body) da resposta
 ```
 
+### Listar hábitos
 
+#### `GET` `/day?date=2023-02-08T14:00:00.000Z`
+Esse endpoint deverá retornar lista de hábitos.
+
+ - Requisição - Query params
+  - `date` - Data atual
+  
+  Atenção: Só serão retornados registros com datas iguais e/ou anteriores à data informada.
+
+- Resposta
+ - `possibleHabits` - Array de hábitos possíveis de serem feitos.
+ - `completedHabits` - Array de hábitos que foram feitos.
+
+Exemplo de resposta:
+
+```javascript
+{
+  "possibleHabits": [
+ {
+	"id": "ef28ebf8-1534-4af3-9bed-5b83de709afd",
+	"title": "Exemplo de hábito",
+	"created_at": "2023-02-08T03:00:00.000Z"
+ }
+ ],
+  "completedHabits": []
+}
+```
 
 
