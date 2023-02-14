@@ -40,7 +40,7 @@ Exemplo da resposta:
 
 ```javascript
 // HTTP Status 200 / 201
-// Sem conteúdo no corpo (body) da resposta
+// Sem conteúdo no corpo (body) da resposta.
 ```
 
 ### Listar hábitos
