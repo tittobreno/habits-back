@@ -7,7 +7,7 @@
 - Zod 
 - DayJS 
 
-#### O papel da API é de: <br/>
+#### Afunção desta API: <br/>
 
  - Criar um novo hábito
  - Listar todos os hábitos
