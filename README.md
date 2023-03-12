@@ -54,8 +54,8 @@ Esse endpoint deverá retornar lista de hábitos.
   Atenção: Só serão retornados registros com datas iguais e/ou anteriores à data informada.
 
 - Resposta
- - `possibleHabits` - Array de hábitos possíveis de serem feitos.
- - `completedHabits` - Array de hábitos que foram feitos.
+	- `possibleHabits` - Array de hábitos possíveis de serem feitos.
+	- `completedHabits` - Array de hábitos que foram feitos.
 
 Exemplo de resposta:
 
