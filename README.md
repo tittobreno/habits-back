@@ -49,7 +49,7 @@ Exemplo da resposta:
 Esse endpoint deverá retornar lista de hábitos.
 
  - Requisição - Query params
-  - `date` - Data atual
+ 	- `date` - Data atual
   
   Atenção: Só serão retornados registros com datas iguais e/ou anteriores à data informada.
 
