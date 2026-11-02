@@ -4,7 +4,10 @@ import { appRoutes } from "./routes";
 
 const app = Fastify();
 
-app.register(cors);
+// @fastify/cors >= 9 only allows GET,HEAD,POST by default; the web app needs PATCH.
+app.register(cors, {
+  methods: ["GET", "HEAD", "POST", "PUT", "PATCH", "DELETE"],
+});
 app.register(appRoutes);
 
 app
