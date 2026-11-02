@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { prisma } from "./lib/prisma";
+import { prisma } from "./lib/prisma.js";
 
 export const appRoutes = async (app: FastifyInstance) => {
   app.post("/habits", async (request) => {
@@ -73,7 +73,7 @@ export const appRoutes = async (app: FastifyInstance) => {
 
   app.patch("/habits/:id/toggle", async (request) => {
     const toggleHabitParams = z.object({
-      id: z.string().uuid(),
+      id: z.uuid(),
     });
 
     const { id } = toggleHabitParams.parse(request.params);
