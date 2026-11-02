@@ -8,28 +8,29 @@
     "node": ">=22.12"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "typecheck": "tsc --noEmit"
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^11.3.1",
-    "@prisma/client": "^4.8.1",
+    "@prisma/adapter-better-sqlite3": "^7.10.1",
+    "@prisma/client": "^7.10.1",
     "dayjs": "^1.11.23",
     "fastify": "^5.12.7",
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@mermaid-js/mermaid-cli": "^9.3.0",
+    "@hpcc-js/wasm-graphviz": "^1.0.0",
+    "@mermaid-js/mermaid-cli": "^11.0.0",
     "@types/node": "^24.0.0",
-    "prisma": "^4.8.1",
-    "prisma-erd-generator": "^1.2.5",
+    "dotenv": "^17.4.2",
+    "prisma": "^7.10.1",
+    "prisma-erd-generator": "^3.2.1",
     "tsx": "^4.23.15",
     "typescript": "~6.0.3"
-  },
-  "prisma": {
-    "seed": "tsx prisma/seed.ts"
   }
 }
